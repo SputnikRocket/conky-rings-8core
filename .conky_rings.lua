@@ -4,10 +4,7 @@ normal="0xffffff"
 warn="0xff7200"
 crit="0xFF4A5C"
 
-bgringcolor=""
-fgringcolor=""
 rthickness=6
-
 
 settings_table = {
     {
