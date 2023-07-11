@@ -1,0 +1,86 @@
+conky.config = {
+	background = true,
+	update_interval = 5,
+
+	cpu_avg_samples = 4,
+	net_avg_samples = 2,
+	temperature_unit = 'celsius',
+
+	double_buffer = true,
+	no_buffers = true,
+	text_buffer_size = 2048,
+
+	gap_x = 10,
+	gap_y = 20,
+	minimum_width = 470,
+	maximum_width = 470,
+	minimum_height = 400,
+	
+	own_window = true,
+	own_window_type = 'normal',
+	own_window_transparent = true,
+	own_window_argb_visual = true,
+	own_window_hints = 'undecorated,below,sticky,skip_taskbar,skip_pager',
+
+	border_inner_margin = 0,
+	border_outer_margin = 0,
+	alignment = 'top_right',
+
+	draw_shades = false,
+	draw_outline = false,
+	draw_borders = false,
+	draw_graph_borders = false,
+
+	override_utf8_locale = true,
+	use_xft = true,
+	font = 'DejaVu Sans:Bold:size=6',
+	xftalpha = 0.9,
+	uppercase = false,
+
+	default_color = '#999999',
+	default_shade_color = 'red',
+	default_outline_color = 'green',
+
+	color1 = 'darkgrey',
+	color2 = '#1994D1',
+	color3 = '#ff7200',
+	color4 = '#FF4A5C',
+
+	lua_load = './.conky_rings.lua',
+	lua_draw_hook_post = 'main'
+}
+
+conky.text = [[
+# CPU / UPTIME
+${#b700b8}${voffset 12}${goto 298}${freq}${#3a6bff} MHz${goto 360}Uptime ${uptime_short}
+# TEMP
+${#a50fc2}${alignr 114}${acpitemp}°C
+${#3a6bff}${voffset 0.3}${goto 250}CPU 1${alignr 122}${cpu cpu0}%
+${#4c5cf5}${voffset 0}${goto 260}CPU 2${alignr 129}${cpu cpu1}%
+${#5e4ceb}${voffset 0}${goto 267}CPU 3${alignr 135}${cpu cpu2}%
+${#703de1}${voffset 0}${goto 270}CPU 4${alignr 140}${cpu cpu3}%
+${#812ed6}${voffset 0}${goto 270}CPU 5${alignr 143}${cpu cpu4}%
+${#931fcc}${voffset 0}${goto 267}CPU 6${alignr 143}${cpu cpu5}%
+${#a50fc2}${voffset 0}${goto 260}CPU 7${alignr 143}${cpu cpu6}%
+${#b700b8}${voffset 0}${goto 250}CPU 8${alignr 142}${cpu cpu7}%
+# TOP CPU
+${#b700b8}${goto 240}${voffset 5}${top name 1}${alignr 96}${top cpu 1}%
+${#981bca}${goto 232}${top name 2}${alignr 90}${top cpu 2}%
+${#7936dc}${goto 230}${top name 3}${alignr 86}${top cpu 3}%
+${#5950ed}${goto 232}${top name 4}${alignr 87}${top cpu 4}%
+${#3a6bff}${goto 240}${top name 5}${alignr 94}${top cpu 5}%
+# HDD
+${voffset 52}${alignr 215}${fs_used /home} / ${fs_size /home} root
+${#7936dc}${voffset 2}${alignr 225}${fs_used /boot} / ${fs_size /boot} boot
+# MEMORY
+${#b325b4}${voffset 65}${goto 322}ram %
+${#9b33c3}${voffset 1}${goto 312}${top_mem name 1}
+${#8241d2}${goto 308}${top_mem name 2}
+${#6a4fe1}${goto 309}${top_mem name 3}
+${#515df0}${goto 314}${top_mem name 4}
+${#396bff}${goto 330}${top_mem name 5}
+${#720273}${voffset 8}${goto 348}SWAP ${alignr}${swap} / ${swapmax}
+${#396bff}${voffset 4}${goto 328}RAM ${alignr 5}${mem} / ${memmax}
+# VERSION
+${#4c5cf5}${voffset 10}${alignr 15}${execi 86400 uname} ${execi 86400 uname -m} ${execi 86400 uname -r}
+]]
