@@ -46,7 +46,7 @@ conky.config = {
 	color3 = '#ff7200',
 	color4 = '#FF4A5C',
 
-	lua_load = '~/.conky_rings.lua',
+	lua_load = './.conky_rings.lua',
 	lua_draw_hook_post = 'main'
 }
 
