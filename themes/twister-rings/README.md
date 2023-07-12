@@ -1,6 +1,6 @@
 # TwisterOS Conky Theme
 
-![image](https://github.com/SputnikRocket/conky-rings-8core/assets/108942763/acdb8cf9-a9ad-4505-9818-e16da8b9a4de)
+![image](https://github.com/SputnikRocket/conky-rings-8core/blob/main/themes/twister-rings/twister_rings.png)
 
 
 ## To install: 
