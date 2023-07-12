@@ -1,6 +1,6 @@
 # Original Black & White theme
 
-![image](https://github.com/SputnikRocket/conky-rings-8core/assets/108942763/6637799a-890a-4431-bea0-9207a0751a5c)
+![image](https://github.com/SputnikRocket/conky-rings-8core/blob/main/themes/blackandwhite-rings-original/bw_original.png)
 
 ## To install: 
 ```
